@@ -1,0 +1,147 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, 
+    top=0.6cm, 
+    bottom=0.6cm, 
+    left=1.2cm, 
+    right=1.2cm, 
+    footskip=0.5cm
+]{geometry}
+\usepackage{titlesec} 
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage{tikz} % For drawing lines
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle={Monesh Kovi's Resume},
+    pdfauthor={Monesh Kovi},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=myNavy,
+    linkcolor=myAccent
+}
+\usepackage{lastpage}
+\usepackage{paracol}
+
+% Formatting settings:
+\raggedright
+\pagestyle{empty} 
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt} 
+\setlength{\columnsep}{0.15cm} 
+\pagenumbering{gobble}
+
+% Custom colors
+\definecolor{myBlue}{RGB}{43, 87, 151}
+\definecolor{myNavy}{RGB}{0, 32, 96}
+\definecolor{myAccent}{RGB}{173, 20, 87} % Deep pink accent
+\definecolor{myGray}{RGB}{240, 240, 245}
+\definecolor{myDarkGray}{RGB}{80, 80, 80}
+
+% Section title format with enhanced styling
+\titleformat{\section}
+    {\color{myNavy}\bfseries\normalsize}
+    {}
+    {0pt}
+    {\tikz[overlay]\draw[myAccent, very thick] (0,-0.1) -- (\textwidth,-0.1);}
+\titlespacing{\section}{0pt}{0.15cm}{0.1cm}
+
+% Custom bullet point
+\renewcommand\labelitemi{\textcolor{myAccent}{\faChevronRight}} 
+
+\begin{document}
+
+% Name and Contact Information with improved styling
+\noindent
+\begin{tabularx}{\textwidth}{X r}
+    \textbf{\fontsize{20pt}{22pt}\selectfont \textcolor{myNavy}{Monesh Kovi}} & 
+    \begin{tabular}{r}
+        \href{mailto:monesh.kovi1@gmail.com}{\textcolor{myAccent}{\faEnvelope} \ monesh.kovi1@gmail.com} \\
+        \href{https://linkedin.com/in/monesh-kovi}{\textcolor{myBlue}{\faLinkedin} \ monesh-kovi} \\
+        \href{https://github.com/moneshkovi}{\textcolor{myDarkGray}{\faGithub} \ moneshkovi} \\
+        \textcolor{myAccent}{\faPhone} \ 314-896-0887 \\
+    \end{tabular}
+\end{tabularx}
+\vspace{-0.05cm}
+\noindent\textcolor{myAccent}{\rule{\textwidth}{0.8pt}}
+
+\vspace{0.1cm}
+
+% Education Section with icon
+\section{\faGraduationCap \ Education}
+\begin{tabularx}{\textwidth}{X r}
+    \textbf{\textcolor{myBlue}{Saint Louis University}} -- Master of Information Systems & \textcolor{myDarkGray}{Aug 2023 -- Present} \\
+    \textcolor{myAccent}{GPA: 3.95} & \\
+    \textbf{\textcolor{myBlue}{Presidency University}} -- Bachelor of Information Science & \textcolor{myDarkGray}{Aug 2019 -- Apr 2023} \\
+    GPA: 3.4 & \\
+\end{tabularx}
+
+\vspace{0.1cm}
+
+% Work Experience Section with icon
+\section{\faBriefcase \ Work Experience}
+\textbf{\textcolor{myNavy}{Cloud Architect Intern}} -- \textit{Alphathena}, Chicago, IL \hfill \textcolor{myDarkGray}{Jan 2025 -- Ongoing}
+\begin{itemize}[leftmargin=*, itemsep=0pt, parsep=0pt]
+    \item Centralized AWS service logs and built an OpenSearch dashboard to streamline log monitoring and reduce issue triage time by 40\%.
+    \item Built a scalable ETL framework using Python and Apache Airflow to automate daily data imports, reducing human intervention by 90\%.
+    \item Designed and implemented a log archival pipeline to move PROD API and Flask logs to S3 with automated Glacier transition after 15 days, optimizing storage costs and ensuring audit readiness.
+\end{itemize}
+
+\textbf{\textcolor{myNavy}{Cloud Architect Intern}} -- \textit{Alphathena}, Chicago, IL \hfill \textcolor{myDarkGray}{May 2024 -- Aug 2024}
+\begin{itemize}[leftmargin=*, itemsep=0pt, parsep=0pt]
+    \item Optimized website hosting with AWS Elastic Beanstalk and AWS Amplify, ensuring high availability and scalability.
+    \item Developed \& Implemented the security of cloud instances by implementing an automated monthly rotation of PEM files, enhancing instance protection and access control.
+    \item Developed custom AES encryption for S3 objects, ensuring robust data security and compliance with industry standards.
+\end{itemize}
+
+\textbf{\textcolor{myNavy}{Software Engineer Intern}} -- \textit{Wrecked Esports}, Bangalore, India \hfill \textcolor{myDarkGray}{Apr 2023 -- Jul 2023}
+\begin{itemize}[leftmargin=*, itemsep=0pt, parsep=0pt]
+    \item Designed and deployed an internal reporting dashboard using advanced MySQL queries to enhance decision-making
+    \item Enhanced invoice accuracy and query responsiveness by 44\% while cutting maintenance needs by 50\% using AI.
+    \item Developed serverless applications using AWS Lambda and API Gateway for improved cost efficiency and scalability.
+\end{itemize}
+
+\textbf{\textcolor{myNavy}{Software Engineer Intern}} -- \textit{Wrecked Tech Private Limited}, Bangalore, India \hfill \textcolor{myDarkGray}{Jan 2023 -- Mar 2023}
+\begin{itemize}[leftmargin=*, itemsep=0pt, parsep=0pt]
+    \item Automated testing processes with Bash scripts, improving system reliability and operational efficiency.
+    \item Developed a feed refresh algorithm that boosted processing speed by 150\% and increased content uniqueness by 80\%.
+    \item Performed advanced data analysis with Pandas and NumPy, enabling data-driven decision-making and identifying key metrics.
+\end{itemize}
+
+\vspace{0.1cm}
+
+% Projects Section with icon
+\section{\faLaptopCode \ Projects}
+\textbf{\textcolor{myNavy}{AI-Powered Content Generation and Management Platform}}, Self-Developed — \textit{\textcolor{myBlue}{AWS, OpenAI, Elastic Beanstalk, S3, Secrets Manager}}
+
+Developed and deployed an AI-powered platform using AWS Elastic Beanstalk, integrated OpenAI's GPT-4 API for automated content generation, and utilized Amazon S3 for secure, scalable storage, \textcolor{myAccent}{reducing manual effort by 70\%}.
+
+\vspace{0.1cm}
+
+% Core Skills Section with icon
+\section{\faTools \ Core Skills}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
+\textcolor{myNavy}{\textbf{Languages:}} Python, JavaScript, HTML, CSS, Bash \\
+\textcolor{myNavy}{\textbf{Technologies:}} AWS (EC2, S3, EBS, VPC, CloudTrail, Lambda, API Gateway, Glue, Quicksight), Linux, ETL, Docker, Git, Cloudflare, Elastic Stack, Scikit-learn, Pentaho, Apache Airflow\\
+\textcolor{myNavy}{\textbf{Databases:}} MySQL, Redis, InfluxDB, DynamoDB \\
+\textcolor{myNavy}{\textbf{Frameworks:}} ReactJS \\
+\end{tabularx}
+
+\vspace{0.1cm}
+
+% Certifications Section with icon
+\section{\faCertificate \ Certifications}
+\textbf{\href{https://cp.certmetrics.com/amazon/en/public/verify/credential/dc7c20379cf94f2699a4d430c31ac969}{AWS Certified Developer}} -- Amazon Web Services \hfill \textcolor{myDarkGray}{Jul 2024} \\
+\textbf{\href{https://cp.certmetrics.com/amazon/en/public/verify/credential/7ec7fce4db1f4b1bab3b6f8caa3f509b}{AWS Certified Solution Architect}} -- Amazon Web Services \hfill \textcolor{myDarkGray}{Jul 2024}
+
+% Footer line
+\vspace{0.1cm}
+\noindent\textcolor{myAccent}{\rule{\textwidth}{0.4pt}}
+
+\end{document}
