@@ -1,0 +1,15 @@
+# Jekyll configuration
+title: Monesh Kovi Portfolio
+description: Monesh Kovi's professional portfolio
+
+# Exclude directories and/or files from the conversion
+exclude:
+  - webapp/node_modules
+  - node_modules
+  - "*.log"
+  - "package*.json"
+  - "*.lock"
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore
