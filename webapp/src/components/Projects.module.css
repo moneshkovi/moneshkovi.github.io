@@ -1,0 +1,82 @@
+.projectsMain {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem 1rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.projectCard {
+  background: var(--card-bg);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(162, 89, 255, 0.08);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: box-shadow 0.22s cubic-bezier(.4,2,.6,1), transform 0.22s cubic-bezier(.4,2,.6,1);
+}
+.projectCard:hover {
+  box-shadow: 0 8px 40px 0 rgba(162, 89, 255, 0.18), 0 0 0 4px rgba(162, 89, 255, 0.10);
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+
+.projectDesc {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.techBadge {
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.5px;
+  border: 1.2px solid #f3eaff;
+  transition: background 0.2s, color 0.2s;
+}
+
+.techBadge:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .projectCard {
+    padding: 1.2rem 0.7rem;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+} 

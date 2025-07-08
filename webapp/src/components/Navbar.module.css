@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  background: var(--navbar-bg, #fff);
+  box-shadow: 0 2px 16px rgba(162, 89, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent, #a259ff);
+  letter-spacing: 1px;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navLinks li a {
+  color: var(--text, #181824);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+}
+.navLinks li a:hover {
+  background: var(--accent-bg, #f3eaff);
+  color: var(--accent, #a259ff);
+}
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent, #a259ff);
+  transition: color 0.2s;
+  margin-left: 1.5rem;
+}
+.themeToggle:focus {
+  outline: 2px solid var(--accent, #a259ff);
+} 

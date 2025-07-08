@@ -1,0 +1,24 @@
+:root {
+  --accent: #a259ff;
+  --accent-bg: #f3eaff;
+  --navbar-bg: #fff;
+  --bg: #fff;
+  --text: #181824;
+  --card-bg: #fff;
+}
+
+body[data-theme='dark'] {
+  --accent: #a259ff;
+  --accent-bg: #232336;
+  --navbar-bg: #181824;
+  --bg: #181824;
+  --text: #fff;
+  --card-bg: #232336;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+} 
